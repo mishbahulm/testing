@@ -1,0 +1,17 @@
+h1 {
+    color: #123456;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 100;
+    /* font-size wajib untuk shorthand */
+    font-size: 50px;
+    line-height: 50px;
+    /* font-family wajib untuk shorthand */
+    font-family: arial, verdana, sans-serif;
+}
+
+p {
+    /* CSS font shorthand/singkatan */
+    /* urutan seperti font pada h1 di atas*/    
+    font: italic normal bold 16px/18px helvetica, arial, sans-serif;
+}
