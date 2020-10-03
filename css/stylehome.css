@@ -49,16 +49,46 @@ table {
 
 /* Style */
 body {
-	/* weight/size font-family */
+	/* weight/line-height font-family */
 	font: 16px/28px arial, sans-serif;
 	background-color: #eaeaea;
 	background-image: url(../image/blue-snow.png);
-	color: #333333;
+	color: #333333;	
 }
+
+.top-bar {
+	position: fixed;
+	background-color: lightskyblue;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	z-index: 9999;
+}
+
+.cari {
+	margin-top: 10px;
+	font: 16px/18px arial;
+}
+
 .container {
-	width: 800px;
-	margin: auto;
-	background-color: white;
+	width: 960px;
+	/* atas dan bawah = 80px | kanan kiri auto; */
+	margin: 80px auto;
+	background-color: white;	
+	position: relative;
+}
+
+.instagram {
+	width: 50px;
+	height: 69px;
+	display: inline-block;	
+	background-image: url("../image/instagram.png");
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	position: absolute;
+	right: 0px;
+	
 }
 
 .header {
@@ -95,35 +125,68 @@ body {
 	border-top: 5px solid salmon;
 }
 
-.content {
+/* main */
+
+.main {
 	padding: 20px;
+	width: 600px;
+	box-sizing: border-box;
+	float: left;
 }
 
-.content h2 {
+.main h2 {
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.content .penulis {
+.main .penulis {
 	font-size: 11px;
 	margin-top: -5px;
 }
 
-.content .penulis a {
+.main .penulis a {
 	color: salmon;
 	text-decoration: none;
 }
 
-.content .penulis a:hover {
+.main .penulis a:hover {
 	background-color: lightskyblue;
 	color: white;
 }
 
-.content p {
+.main p {
 	margin-bottom: 20px;
 	font-size: 14px;
 	text-align: justify;
 }
+
+/* side bar */
+
+.sidebar {
+	width: 300px;
+	float: right;
+	padding: 20px;
+}
+
+.sidebar h3 {
+	font-weight: bold;
+	color: #666666;
+}
+
+.sidebar img {
+	width: 70px;
+	height: 70px;
+	float: left;
+	padding-right: 10px;
+	
+}
+
+.sidebar p {
+	/* fontsize/line-height font-family */
+	font: 16px/18px arial;
+}
+
+/* footer */
 
 .footer {
 	background-color: #333333;
@@ -134,4 +197,19 @@ body {
 	color: #eaeaea;
 	font-size: 12px;
 	text-align: center;
+}
+
+/* micro clear fix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
 }
